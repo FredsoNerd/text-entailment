@@ -1,0 +1,57 @@
+
+* text-entailment
+
+* links
+
+- https://pydelphin.readthedocs.io/en/latest/
+
+- http://alt.qcri.org/semeval2014/task8/
+  - http://alt.qcri.org/semeval2014/task8/index.php?id=data-and-tools
+  - https://github.com/semantic-dependency-parsing/toolkit (abandonado)
+
+- http://sdp.delph-in.net ?
+
+- http://mrp.nlpl.eu/2020/index.php
+  - https://github.com/cfmrp/mtool < http://wesearch.delph-in.net (1)
+
+
+about (1)
+
+- http://moin.delph-in.net/WeSearch/Interface
+- https://github.com/own-pt/wsi (our fork)
+
+
+
+* How to
+
+- create venv with python3
+
+- install pydelphin
+
+- http://moin.delph-in.net/WeSearch/Interface  (svn obtain wsi code)
+
+- compile grammar
+ 
+ compile the grammar
+  svn co http://svn.delph-in.net/erg/trunk terg
+  ace -g ~/hpsg/terg/ace/config.tdl -G erg.dat
+
+  alternativa, baixar grammar de http://sweaglesw.org/linguistics/ace/
+
+- criar profile
+
+% delphin mkprof --input sample.txt --relations ~/hpsg/logon/lingo/lkb/src/tsdb/skeletons/english/Relations --skeleton treebank
+    9746 bytes	relations
+     552 bytes	item
+
+#+BEGIN_SRC python
+  from delphin import ace
+  from delphin import tsdb
+  from delphin import itsdb
+  ts = itsdb.TestSuite('treebank')
+  with ace.ACEParser('erg.dat') as cpu:
+      ts.process(cpu)
+#+END_SRC
+
+
+
