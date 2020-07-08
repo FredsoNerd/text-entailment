@@ -1,6 +1,4 @@
 
-* text-entailment
-
 * links
 
 - https://pydelphin.readthedocs.io/en/latest/
@@ -20,8 +18,6 @@ about (1)
 - http://moin.delph-in.net/WeSearch/Interface
 - https://github.com/own-pt/wsi (our fork)
 
-
-
 * How to
 
 - create venv with python3
@@ -31,11 +27,9 @@ about (1)
 - http://moin.delph-in.net/WeSearch/Interface  (svn obtain wsi code)
 
 - compile grammar
- 
- compile the grammar
+
   svn co http://svn.delph-in.net/erg/trunk terg
   ace -g ~/hpsg/terg/ace/config.tdl -G erg.dat
-
   alternativa, baixar grammar de http://sweaglesw.org/linguistics/ace/
 
 - criar profile
@@ -53,5 +47,17 @@ about (1)
       ts.process(cpu)
 #+END_SRC
 
+- export the EDS and MRS do profile
 
+#+BEGIN_SRC bash
+./redwoods --binary --terg --home /home/user/tmp/ --target /tmp --export mrs,eds --active all treebank
+#+END_SRC
 
+- indexing the files 
+
+#+BEGIN_SRC 
+download apache-jena into wsi-src (current version is 3.15.0)
+create a link to apache-jena to apache-jena-3.15.0
+export JENA_HOME=~/work/text-entailment/wsi-src/apache-jena
+
+#+END_SRC

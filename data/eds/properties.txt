@@ -1,0 +1,4 @@
+name = EDS
+format = eds
+ordered = true
+example = [* x]
