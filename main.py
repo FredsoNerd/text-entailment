@@ -13,18 +13,15 @@
 # 5. If the query h is matched into the inferred model for T, the
 # entailment relation is assigned to the pair.
 
-def main():
-    # we use pydelphin for ERG parser as web client
-    from delphin.web import client
-    response = client.parse('Abrams chased Browne', params={'mrs': 'json'})
+from delphin import ace
+from delphin import eds
+from delphin.codecs import eds as edsnative
+
+grm = 'erg.dat'
+for x in ['The garden dog tried not to bark','Two dogs are fighting']:
+    response = ace.parse(grm, x)
     m = response.result(0).mrs()
+    print(list(m.variables))
+    e = eds.from_mrs(m)
+    print(edsnative.encode(e, indent=True))
 
-    # Kouylekov and Oepen (2014) map different types
-    # of meaning representations, including the EDSs
-    # used in our work, to RDF graphs, stored in off-
-    # the-shelf RDF triple stores, and searched using
-    # SPARQL queries:
-    # At: https://www.aclweb.org/anthology/C14-2.pdf
-
-#-----------------------------------------------------
-if __name__ == '__main__': main()
