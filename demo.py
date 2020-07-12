@@ -4,7 +4,8 @@ import pprint
 
 # https://rdflib.readthedocs.io/en/stable/index.html
 
-data = open("data/eds/rdf/1.nq", "rb")
+data = open("demos/1.nq", "rb")
+# data = open("demos/2.nq", "rb")
 
 g = ConjunctiveGraph()
 g.parse(data, format="nquads")
