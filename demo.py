@@ -10,6 +10,10 @@ def rdfterm_to_str(x):
     return x.n3()
 
 def entail(graphH, graphT):
+    """
+    parse indetifiers in graphT into valid RDF triples
+    and mount the SPARQL query to be queried in graphH
+    """
     rdf = """"""
     for s,p,o in graphT:
         rdf += rdfterm_to_str(s) + " "
@@ -29,7 +33,7 @@ graphs = [x for x in g.store.contexts()]
 # the graphs 0 and 1 were generated separtely
 # for same phrase "Two dogs are fighting"
 res = entail(graphs[0], graphs[1])
-print("Entail value: ", res)
+print("Entail value: ", res) # false
 
 ## we entail each phrase with itself
 # for i in range(98):
