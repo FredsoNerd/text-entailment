@@ -16,7 +16,7 @@ def rdfterm_to_str(x, prefix):
     if x.startswith(prefix): return "?"+x[len(prefix)::]
     return x.n3()
 
-def make_pre_sparql(graphT):
+def make_pre_sparql(graphH):
     """
     parse indetifiers in graphT into triples and mount
     a pre-SPARQL query to be queried in ASK or SELECT
@@ -30,7 +30,7 @@ def make_pre_sparql(graphT):
 
     pre_sparql = """"""
     prefix = "http://example.com/"
-    for s,p,o in graphT:
+    for s,p,o in graphH:
         pre_sparql += rdfterm_to_str(s, prefix) + " "
         pre_sparql += rdfterm_to_str(p, prefix) + " "
         pre_sparql += rdfterm_to_str(o, prefix) + " .\n"
@@ -41,7 +41,7 @@ def entail_model(graphH, graphT):
     """
     receives a pair of HIPOTESIS and TEXT in RDF format
     and try finding a model showing graphT as a subgraph
-    of graphH
+    of graphH, i.e., T => H
 
     returns: a ResultRow containing a list of models
     """
