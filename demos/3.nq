@@ -1,5 +1,5 @@
-<_:1> <http://www.delph-in.net/rdf/eds#bv> <http://example.com/x13> <http://example.com/1> .
-<_:1> <http://www.delph-in.net/rdf/eds#role> <http://example.com/x13> <http://example.com/1> .
+<http://example.com/_1> <http://www.delph-in.net/rdf/eds#bv> <http://example.com/x13> <http://example.com/1> .
+<http://example.com/_1> <http://www.delph-in.net/rdf/eds#role> <http://example.com/x13> <http://example.com/1> .
 <http://example.com/e19> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.delph-in.net/rdf/eds#E> <http://example.com/1> .
 <http://example.com/e19> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.delph-in.net/rdf/eds#I> <http://example.com/1> .
 <http://example.com/e19> <http://www.delph-in.net/rdf/eds#SF> <http://example.com/e19_SF> <http://example.com/1> .
@@ -60,8 +60,8 @@
 <http://example.com/e12> <http://www.delph-in.net/rdf/eds#arg1> <http://example.com/x13> <http://example.com/1> .
 <http://example.com/e12> <http://www.delph-in.net/rdf/eds#role> <http://example.com/x13> <http://example.com/1> .
 <http://example.com/e12> <http://www.delph-in.net/rdf/eds#top> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://example.com/1> .
-<_:1> <http://www.delph-in.net/rdf/eds#bv> <http://example.com/x3> <http://example.com/6> .
-<_:1> <http://www.delph-in.net/rdf/eds#role> <http://example.com/x3> <http://example.com/6> .
+<http://example.com/_1> <http://www.delph-in.net/rdf/eds#bv> <http://example.com/x3> <http://example.com/6> .
+<http://example.com/_1> <http://www.delph-in.net/rdf/eds#role> <http://example.com/x3> <http://example.com/6> .
 <http://example.com/e9> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.delph-in.net/rdf/eds#E> <http://example.com/6> .
 <http://example.com/e9> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.delph-in.net/rdf/eds#I> <http://example.com/6> .
 <http://example.com/e9> <http://www.delph-in.net/rdf/eds#SF> <http://example.com/e9_SF> <http://example.com/6> .

@@ -17,6 +17,7 @@ from delphin import ace
 from delphin import eds
 from delphin.codecs import eds as edsnative
 
+
 grm = 'erg.dat'
 for x in ['The garden dog tried not to bark','Two dogs are fighting']:
     response = ace.parse(grm, x)

@@ -361,3 +361,18 @@
 10 Jul 2020 16:59:39	Query	_*[ARG1 x3]
 10 Jul 2020 16:59:39	Dataset	EDS
 10 Jul 2020 16:59:39	SPARQL	PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>	PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>	PREFIX owl:<http://www.w3.org/2002/07/owl#>	PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>	PREFIX eds:<http://www.delph-in.net/rdf/eds#>	select ?graph (group_concat(?100; separator = "\t") AS ?100Values) (group_concat(?x3; separator = "\t") AS ?x3Values) 	where { 	  GRAPH ?graph { 	?100 eds:arg1 ?x3 .	?100 eds:predicate ?100TEXT .	FILTER regex(?100TEXT, "^_.*$") .	FILTER ( ( !bound(?100) || !bound(?x3) || ?100!=?x3 ) )	}	 }	GROUP BY ?graph	ORDER BY ASC(xsd:integer(STR(?graph)))	
+10 Jul 2020 20:06:03	Query	fight[ARG1 x3]
+10 Jul 2020 20:06:03	Dataset	EDS
+10 Jul 2020 20:06:11	Query	/v*[ARG1 x3]
+10 Jul 2020 20:06:11	Dataset	EDS
+10 Jul 2020 20:06:34	Query	_*
+10 Jul 2020 20:06:34	Dataset	EDS
+10 Jul 2020 20:06:34	SPARQL	PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>	PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>	PREFIX owl:<http://www.w3.org/2002/07/owl#>	PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>	PREFIX eds:<http://www.delph-in.net/rdf/eds#>	select ?graph (group_concat(?100; separator = "\t") AS ?100Values) 	where { 	  GRAPH ?graph { 	?100 eds:predicate ?100TEXT .	FILTER regex(?100TEXT, "^_.*$") .	}	 }	GROUP BY ?graph	ORDER BY ASC(xsd:integer(STR(?graph)))	
+10 Jul 2020 20:06:45	Query	_fight
+10 Jul 2020 20:06:45	Dataset	EDS
+10 Jul 2020 20:06:52	Query	_fight*
+10 Jul 2020 20:06:52	Dataset	EDS
+10 Jul 2020 20:06:52	SPARQL	PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>	PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>	PREFIX owl:<http://www.w3.org/2002/07/owl#>	PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>	PREFIX eds:<http://www.delph-in.net/rdf/eds#>	select ?graph (group_concat(?100; separator = "\t") AS ?100Values) 	where { 	  GRAPH ?graph { 	{ { ?100 eds:predicate "_fight_n_1"^^xsd:string } UNION { ?100 eds:predicate "_fight_v_1"^^xsd:string } }  .	}	 }	GROUP BY ?graph	ORDER BY ASC(xsd:integer(STR(?graph)))	
+10 Jul 2020 20:15:33	Query	_*
+10 Jul 2020 20:15:33	Dataset	EDS
+10 Jul 2020 20:15:33	SPARQL	PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>	PREFIX xsd:<http://www.w3.org/2001/XMLSchema#>	PREFIX owl:<http://www.w3.org/2002/07/owl#>	PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>	PREFIX eds:<http://www.delph-in.net/rdf/eds#>	select ?graph (group_concat(?100; separator = "\t") AS ?100Values) 	where { 	  GRAPH ?graph { 	?100 eds:predicate ?100TEXT .	FILTER regex(?100TEXT, "^_.*$") .	}	 }	GROUP BY ?graph	ORDER BY ASC(xsd:integer(STR(?graph)))	
