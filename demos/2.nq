@@ -1,6 +1,6 @@
 <http://example.com/_1> <http://www.delph-in.net/rdf/eds#bv> <http://example.com/x3> <http://example.com/92> .
 <http://example.com/_1> <http://www.delph-in.net/rdf/eds#role> <http://example.com/x3> <http://example.com/92> .
-<http://example.com/http://example.com/x3> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.delph-in.net/rdf/eds#X> <http://example.com/92> .
+<http://example.com/x3> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.delph-in.net/rdf/eds#X> <http://example.com/92> .
 <http://example.com/x3> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.delph-in.net/rdf/eds#P> <http://example.com/92> .
 <http://example.com/x3> <http://www.w3.org/2000/01/rdf-schema#type> <http://www.delph-in.net/rdf/eds#I> <http://example.com/92> .
 <http://example.com/x3> <http://www.delph-in.net/rdf/eds#PERS> <http://example.com/x3_PERS> <http://example.com/92> .
