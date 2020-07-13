@@ -46,10 +46,10 @@ def entail_model(graphH, graphT):
     returns: a ResultRow containing a list of models
     """
 
-    pre_sparql = make_pre_sparql(graphT)
+    pre_sparql = make_pre_sparql(graphH)
     sparql = "select * where {" + pre_sparql +"}"
 
-    res = graphH.query(sparql)
+    res = graphT.query(sparql)
     print("Found {} models.".format(len(res)))
     return res
 
@@ -62,10 +62,10 @@ def entail_ask(graphH, graphT):
     returns: true (entail) or false (not entail)
     """
 
-    pre_sparql = make_pre_sparql(graphT)
+    pre_sparql = make_pre_sparql(graphH)
     sparql = "ask {" + pre_sparql +"}"
 
-    res = graphH.query(sparql)
+    res = graphT.query(sparql)
     return bool(res)
 
 #############################################
