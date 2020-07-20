@@ -73,17 +73,30 @@ def entail_ask(graphH, graphT):
 # for the same phrase "Two dogs are fighting"
 # graphs are represented differently in 3.nq
 
-data = open("demos/3.nq", "rb")
+data = open("demos/4.nq", "rb")
 
 g = ConjunctiveGraph()
 g.parse(data, format="nquads")
 graphs = [x for x in g.store.contexts()]
 
-# ask if there is a model
-res = entail_ask(graphs[0], graphs[1])
-print("Entail: ", res)
-# ask for model granting entail
-res = entail_model(graphs[0], graphs[1])
-print("Model: ", res)
-# iter over entail model showing model
-for model in res: pprint.pprint(model)
+# # ask if there is a model
+# res = entail_ask(graphs[0], graphs[1])
+# print("Entail: ", res)
+# # ask for model granting entail
+# res = entail_model(graphs[0], graphs[1])
+# print("Model: ", res)
+# # iter over entail model showing model
+# for model in res: pprint.pprint(model)
+
+data1 = open("demos/4.nq", "rb")
+
+g1 = ConjunctiveGraph()
+g1.parse(data1, format="nquads")
+graphs1 = [x for x in g1.store.contexts()]
+
+for g in graphs:
+    for g1 in graphs1:
+        res = entail_ask(g, g1)
+        print(res)
+
+
